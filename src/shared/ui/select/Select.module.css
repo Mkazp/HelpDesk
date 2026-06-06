@@ -1,0 +1,46 @@
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 0.65rem 0.85rem;
+  color: var(--text);
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 2px),
+    calc(100% - 13px) calc(50% - 2px);
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.select:focus {
+  border-color: rgba(37, 99, 235, 0.7);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.error {
+  border-color: var(--danger);
+}
+
+.message {
+  font-size: 0.8rem;
+  color: var(--danger);
+}

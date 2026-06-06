@@ -1,0 +1,223 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 1.25rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1.25rem;
+  background: linear-gradient(180deg, #0f172a 0%, #111d39 100%);
+  color: rgba(255, 255, 255, 0.84);
+  overflow: visible;
+  transition:
+    padding 0.2s ease,
+    transform 0.2s ease,
+    width 0.2s ease;
+}
+
+.toggleRow {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  min-width: 0;
+  padding-right: 2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-width: 0;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: rgba(37, 99, 235, 0.18);
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  flex: none;
+}
+
+.brandText {
+  min-width: 0;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.brandName {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.brandCaption {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.toggleButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  min-height: 2rem;
+  padding: 0;
+  border-radius: 999px;
+  border-color: rgba(215, 223, 235, 0.92);
+  background: #fff;
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+}
+
+.toggleButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.toggleIcon {
+  font-size: 1.15rem;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+.nav {
+  display: grid;
+  align-content: start;
+  gap: 0.45rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 44px;
+  padding: 0.75rem 0.95rem;
+  border-radius: 14px;
+  color: rgba(255, 255, 255, 0.76);
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  transform: translateX(2px);
+}
+
+.active {
+  background: rgba(37, 99, 235, 0.24);
+  color: #fff;
+}
+
+.linkBadge {
+  display: grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  flex: none;
+}
+
+.linkLabel {
+  min-width: 0;
+}
+
+.footer {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.footerNote {
+  margin: 0;
+  padding: 0.85rem 0.9rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.collapsed {
+  padding-inline: 0.95rem;
+}
+
+.collapsed .toggleRow {
+  padding-right: 0;
+}
+
+.collapsed .brandText,
+.collapsed .linkLabel,
+.collapsed .footerNote {
+  display: none;
+}
+
+.collapsed .brand {
+  justify-content: center;
+  width: 100%;
+}
+
+.collapsed .toggleButton {
+  right: -0.4rem;
+}
+
+.collapsed .link {
+  justify-content: center;
+  padding-inline: 0.65rem;
+}
+
+.collapsed .link:hover {
+  transform: translateY(-1px);
+}
+
+.backdrop {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: min(86vw, 320px);
+    z-index: 40;
+    transform: translateX(-102%);
+    transition: transform 0.2s ease;
+    box-shadow: 20px 0 40px rgba(15, 23, 42, 0.28);
+  }
+
+  .open {
+    transform: translateX(0);
+  }
+
+  .toggleButton {
+    right: 0;
+  }
+
+  .backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    display: block;
+    border: 0;
+    background: rgba(15, 23, 42, 0.42);
+  }
+
+  .collapsed {
+    padding-inline: 1.25rem;
+  }
+
+  .collapsed .brandText,
+  .collapsed .linkLabel,
+  .collapsed .footerNote {
+    display: grid;
+  }
+}

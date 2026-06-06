@@ -1,0 +1,12 @@
+.tableShell {
+  width: 100%;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.compact {
+  border-radius: 14px;
+}

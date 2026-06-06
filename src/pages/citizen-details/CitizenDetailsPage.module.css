@@ -1,0 +1,138 @@
+.page {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.loading {
+  min-height: 48vh;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+
+.headerCard {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(22, 163, 74, 0.03)), #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.kicker {
+  margin: 0;
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.title {
+  margin: 0.45rem 0 0;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+.description {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+}
+
+.headerActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.overview {
+  display: grid;
+  gap: 1rem;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.miniCard,
+.detailCard,
+.itemCard {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.miniCard span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.miniCard strong {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 1.4rem;
+}
+
+.panelGrid,
+.listGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.panelGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.itemTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.itemTop h3 {
+  margin: 0;
+}
+
+.itemTop p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+.badges,
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.metaRow {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.requestActions {
+  margin-top: 0.8rem;
+}
+
+@media (max-width: 920px) {
+  .headerCard {
+    flex-direction: column;
+  }
+
+  .headerActions {
+    width: 100%;
+  }
+
+  .statsRow,
+  .panelGrid {
+    grid-template-columns: 1fr;
+  }
+}

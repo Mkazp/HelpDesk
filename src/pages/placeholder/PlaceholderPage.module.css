@@ -1,0 +1,33 @@
+.page {
+  display: grid;
+  place-items: center;
+  min-height: 60vh;
+}
+
+.card {
+  width: min(680px, 100%);
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow-md);
+}
+
+.kicker {
+  margin: 0;
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.title {
+  margin: 0.55rem 0 0;
+  font-size: 1.8rem;
+}
+
+.description {
+  margin: 0.75rem 0 1.25rem;
+  color: var(--muted);
+}

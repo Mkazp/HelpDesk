@@ -1,0 +1,109 @@
+.wrapper {
+  display: grid;
+  gap: 1rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(215, 223, 235, 0.72);
+  vertical-align: top;
+}
+
+.table th {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  background: #f8fbff;
+}
+
+.row {
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.row:hover {
+  background: rgba(37, 99, 235, 0.04);
+}
+
+.selected {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.primaryCell {
+  font-weight: 700;
+}
+
+.secondaryCell {
+  margin-top: 0.2rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.headerButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sortIndicator {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.activeSort {
+  color: var(--primary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.loading,
+.empty {
+  padding: 1.8rem 1rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.summary {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 860px) {
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pagination {
+    justify-content: space-between;
+  }
+}

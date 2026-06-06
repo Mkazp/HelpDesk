@@ -1,0 +1,1 @@
+export { CitizenDetailsPage } from './CitizenDetailsPage';
